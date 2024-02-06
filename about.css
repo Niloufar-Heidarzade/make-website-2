@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap');
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+.header-navbar {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  background-color: rgb(10,10,10,0.2);
+  font-family:"Atkinson Hyperlegible",sans-serif;
+  position:fixed;
+  z-index: 3;
+}
+
+.header-navbar h1 a{
+  margin-left: 1rem;
+  color:#ffff33 ;
+ 
+}
+
+.header-navbar a {
+  text-decoration: none;
+}
+
+#menu-btn {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+}
+
+.menu-icon {
+  visibility: hidden;
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+ position: absolute;
+ right:20px;
+ top:30px;
+}
+.nav-item{
+  margin-right:30px;
+  color:#ffff33;
+}
+
+@media screen and (max-width: 1100px) {
+  
+  .header-navbar {
+    display: grid;
+    grid-template-areas:
+       "title   title   hamburger"
+       "nav     nav     nav";
+  }
+  
+  .header-navbar h1 {
+    grid-area: title;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: #ffff33;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  .menu-icon {
+    grid-area: hamburger;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    padding: 30px 20px 30px 0;
+    position: relative;
+    user-select: none;
+    visibility: visible;
+  }
+
+  .navicon {
+    background: #ffff33;
+    display: block;
+    height: 2px;
+    width: 20px;
+    position: relative;
+  }
+
+  .navicon:before {
+    top: 5px;
+  }
+
+  .navicon:after {
+    top: -5px;
+  }
+
+  .navicon:before, .navicon:after {
+    background: #ffff33;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+    transition: all .2s ease-out;
+  }
+
+  .menu {
+    grid-area: nav;
+    max-width: unset;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(10,10,10,0.2);
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    margin-top:52px
+  }
+
+  .menu a {
+    padding: 20px 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu-btn:checked ~ .menu {
+    max-height: 240px;
+  }
+
+  .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+
+  .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+
+  .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+
+  .menu-btn:checked ~ .menu-icon .navicon:before,
+  .menu-btn:checked ~ .menu-icon .navicon:after {
+    top: 0;
+  } 
+}
+body{
+  background-color: #ffefd7;
+}
+.container{
+  position:absolute;
+  top:200px;
+  left:100px;
+  display:flex;
+  flex-direction:column;
+  row-gap:140px;
+}
+.row{
+  display:flex;
+  column-gap:120px;
+  flex-wrap:wrap;
+}
+.line{
+  position:relative;
+}
+.line p{
+  font-family:"Atkinson Hyperlegible",sans-serif;
+  color:#333333;
+  font-size:25px;
+}
+.line p::before{
+  content:url(/icons8-check-50.png);
+  position:absolute;
+  left:-58px;
+  top:-18px;
+}
+section{
+  display:flex;
+  justify-content:space-around;
+  align-items: center;
+  flex-wrap:wrap;
+  column-gap: 20px;
+}
+.images{
+  position:absolute;
+  top:150px;
+  left:700px;
+}
+.why{
+  position: absolute;
+  top:230px;
+  left:767px;
+  font-family:"Atkinson Hyperlegible",sans-serif;
+  color:#333333;
+  font-size:25px;
+}
+@media only screen and (max-width:925px){
+  .images{
+    top:680px;
+    left:200px;
+  }
+  .why{
+    top:760px;
+    left:270px;
+  }
+}
+.circle{
+  animation: rotate 8s linear infinite;
+}
+@keyframes rotate{
+  to{transform: rotate(-360deg);}
+}
+.images p:first-of-type{
+  filter: blur(2px);
+  color:rgb(174, 110, 174);
+  font-size:35px;
+  font-family:"Atkinson Hyperlegible",sans-serif;
+  background-color: white;
+  margin-left:60px;
+  transform: rotate(-30deg);
+  font-weight:700;
+  height:30px;
+}
+.images p:nth-child(3){
+  font-family:"Atkinson Hyperlegible",sans-serif;
+  color:rgb(228, 115, 115);
+  font-size: 150px;
+  filter: blur(2px);
+  text-shadow: 10px -10px 0px white , -10px 10px 0px white;
+  transform: rotate(-30deg);
+  margin-left:-30px;
+}
+  
+  
+
