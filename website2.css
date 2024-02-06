@@ -1,32 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap');
 body {
   margin: 0;
+  box-sizing: border-box;
+  padding:0;
 }
-
-header {
+/* **********************header begins******************* */
+header{
+  background-image:url(/background3.jpg);
+  height:100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family:"Atkinson Hyperlegible",sans-serif;
+  
+}
+.header-navbar {
   display: flex;
   width: 100%;
   background-color: rgb(10,10,10,0.2);
   font-family:"Atkinson Hyperlegible",sans-serif;
+  position:fixed;
+  z-index: 3;
 }
 
-header h1 a{
+.header-navbar h1 a{
   margin-left: 1rem;
   color:#ffff33 ;
 }
 
-header a {
+.header-navbar a {
   text-decoration: none;
 }
 
-/* "Hide" checkbox -- moves it off screen*/
 #menu-btn {
   position: absolute;
   top: -100%;
   left: -100%;
 }
 
-/* Hide hamburger for bigger screens */
 .menu-icon {
   visibility: hidden;
 }
@@ -44,20 +55,16 @@ header a {
   color:#ffff33;
 }
 
-
-/* Set width for mobile/smaller screen size. */
-/* I set it big here so I don't have to shrink the screen so much */
-/* for testing purposes */
 @media screen and (max-width: 1100px) {
   
-  header {
+  .header-navbar {
     display: grid;
     grid-template-areas:
        "title   title   hamburger"
        "nav     nav     nav";
   }
   
-  h1 {
+  .header-navbar h1 {
     grid-area: title;
   }
   
@@ -150,4 +157,453 @@ header a {
     top: 0;
   }
 }
+.header-middle{
+  width:100%;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+}
+.header-middle h1{
+  color:aliceblue
+}
+.header-middle button{
+  background-color: #ffff33;
+  border: none;
+  height: 65px;
+  width:190px;
+  font-size:large;
+  color:black;
+  font-weight: 700;
+  border-radius:60px;
+}
+.header-navbar h1 a:hover{
+  color:#dbdb2e
+}
+.menu a:hover {
+  color: #dbdb2e;
+}
+.header-middle button:hover{
+  background-color: pink;
+}
+.header-middle button:active{
+  box-shadow: 0 0 0 5px rgba(152, 138, 138,0.5);
+}
+/*   **************header ends************************ */
+/* **********main fiirst section begins********** */
+.pancake{
+  border-radius: 300px 600px 500px 600px;
+  width:450px;
+  position:absolute;
+  left:550px;
+  bottom:100px;
+}
+.get-started{
+  width:100%;
+  height:900px;
+  background-color:#ffefd7;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.start-card{
+  width:1100px;
+  height:500px;
+  background-color: #daadcc;
+  margin-top: 100px;
+  position:absolute;
+}
+.first-para{
+  font-family:"Atkinson Hyperlegible",sans-serif;
+  font-size:30px;
+  font-weight:700;
+  color:#333333;
+  position:absolute;
+  margin-left: -800px;
+  
+}
+.start-button{
+  position:absolute;
+  margin-left: -810px;
+  margin-top:400px;
+  background-color: #ffff33;
+  border: none;
+  height: 65px;
+  width:190px;
+  font-size:large;
+  color:black;
+  font-weight: 700;
+  border-radius:60px;
+}
+.second-para{
+  position:absolute;
+  color:white;
+  font-family:"Atkinson Hyperlegible",sans-serif;
+  font-size:30px;
+  line-height:50px;
+  margin-top:-70px;
+  transform: rotate(-20deg)
+}
+.third-paragraph{
+  position: absolute;
+  margin-top:370px;
+  font-family:"Atkinson Hyperlegible",sans-serif;
+  font-size:18px;
+}
+.start-button:hover{
+  background-color: pink;
+}
+.start-button:active{
+  box-shadow: 0 0 0 5px rgba(152, 138, 138,0.5);
+}
+.start-card-mobile{
+  visibility:hidden;
+  position: absolute;
+  display:flex;
+  flex-direction: column;
+  justify-content:space-around;
+  align-items: center;
+  margin-top:100px;
+}
+.pancake2{
+  border-radius: 300px 600px 500px 600px;
+  width:450px;
+  left:550px;
+  bottom:100px;
+}
+.first-para2{
+  font-family:"Atkinson Hyperlegible",sans-serif;
+  font-size:30px;
+  font-weight:700;
+  color:#333333;
+}
+.start-button2{
+  background-color: #ffff33;
+  border: none;
+  height: 65px;
+  width:190px;
+  font-size:large;
+  color:black;
+  font-weight: 700;
+  border-radius:60px;
+}
+.start-button2:hover{
+  background-color: pink;
+}
+.start-button2:active{
+  box-shadow: 0 0 0 5px rgba(152, 138, 138,0.5);
+}
+.second-para2{
+  font-family:"Atkinson Hyperlegible",sans-serif;
+  font-size:18px
+}
+.third-para2{
+  color:white;
+  font-family:"Atkinson Hyperlegible",sans-serif;
+  font-size:30px;
+  line-height:50px;
+  transform: rotate(-20deg);
+  margin-top:-20px;
+}
+@media only screen and (max-width:1150px){
+  .start-card{
+    width:900px;
+  }
+  .first-para{
+    margin-left: -600px;
+    margin-top:50px;
+  }
+  .start-button{
+    margin-left:-600px;
+    margin-top:390px;
+  }
+  .pancake{
+    margin-left:-150px;
+  }
+  .second-para{
+    margin-top: -200px;
+  }
+  .third-paragraph{
+    margin-top: 300px;;
+  }
+  .get-started{
+   height:900px;
+  }
+}
+@media only screen and (max-width:1000px){
+  .get-started{
+    height:1300px;
+  }
+  .start-card{
+    width:500px;
+    height:1000px;
+  }
+  .first-para , .start-button ,.second-para , .pancake , .third-paragraph{
+    display: none;
+  }
+  .start-card-mobile{
+    visibility:visible;
+  }
+  
+}
+/* *********** main first section ends***************** */
+/* ************ main second section begins  ****************** */
+.skill{
+  background-color:#ffe2b7 ;
+  height:1000px;
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+}
+.texts{
+  position:relative;
+}
+.skill > div{
+  width:500px;
+  height:700px;
+  padding:30px;
+}
+.texts h1{
+  font-family:"Atkinson Hyperlegible",sans-serif;
+  color:#333333;
+  font-size:60px;
+  margin-top:-70px
+}
+.texts span{
+  background-color: #ffff33;
+}
+.texts p{
+  font-family:"Atkinson Hyperlegible",sans-serif;
+  color:#333333;
+  font-size:20px;
+  margin-left:20px;
+}
+.skill strong::before{
+  content: url(/icons8-arrow-30.png);
+  position:absolute;
+  left:10px;
+}
+.pics{
+  position:relative;
+}
+.big-pic{
+  width:300px;
+  height:300px;
+  position:absolute;
+  top:500px;
+  left:300px;
+  background-image: url(/features9.jpg);
+  background-size:cover;
+  background-position:center;
+  z-index: 2;
+}
+.small-pic{
+  background-image: url(/features8.jpg);
+  width:180px;
+  height:180px;
+  background-size:cover;
+  background-position:center;
+  position: absolute;
+  left:400px;
+  top:-80px;
+  z-index:2;
+}
+.largest-pic{
+  background-image: url(/features7.jpg);
+  background-size:cover;
+  background-position:center;
+  position: absolute;
+  width:400px;
+  height:650px;
+  top:-10px;
+  left:60px;
+  z-index:1;
+}
+.skill-mobile{
+display:none;
+color:#333333;
+font-family:"Atkinson Hyperlegible",sans-serif;
+}
+.pics2{
+  display: flex;
+  flex-direction:row;
+  justify-content:space-around;
+  
+}
+.picture1{
+  background-image: url(/features7.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.picture2{
+  background-image: url(/features8.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.picture3{
+  background-image: url(/features9.jpg);
+  background-position: center;
+  background-size: cover;
+}
+@media only screen and (max-width:1235px){
+  .pics{
+    left:-100px;
+  }
+}
+@media only screen and (max-width:1076px){
+ .texts , .pics{
+  display:none;
+ }
+ .skill-mobile{
+  display:flex;
+  flex-direction:column;
+  margin-top:-500px;
+ }
+ .texts2{
+  padding:50px;
+  font-size: 20px;
+ }
+ .skill{
+  height:1500px;
+ }
+ .skill-mobile h1{
+  font-size:40px;
+ }
+ .skill-mobile span{
+  background-color:#ffff33;
+ }
+ .pics2 div{
+  width:200px;
+  height:300px;
+ }
 
+}
+@media only screen and (max-width:800px){
+
+.skill-mobile{
+ margin-left:50px;
+ display:flex;
+ flex-direction:column;
+ align-items: center;
+}
+.texts2 p{
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  word-wrap: break-word;
+}
+.pics2 div{
+  width:150px;
+  height:300px;
+}
+}
+/* ********main second section ends ************** */
+/* *********** main third section begins ************ */
+.order{
+  background-color: #ffefd7;
+  width:100%;
+  height:400px;
+  margin-top: -43px;
+  
+}
+.order h1{
+  color:#333333;
+  font-family:"Atkinson Hyperlegible",sans-serif;
+  font-size:50px;
+  margin-left:100px;
+
+}
+.order-container{
+  display:flex;
+  justify-content:start;
+  align-items:center;
+  margin-top:-80px;
+  flex-wrap:wrap;
+}
+.card1{
+  position:relative;
+}
+
+.order-container svg{
+  width:200px;
+}
+.card1::after{
+  content:url(/icons8-arrow-50.png);
+  position:absolute;
+  left:180px;
+  bottom:70px;
+}
+.card1::before{
+  content:"Select product";
+  font-family:"Atkinson Hyperlegible",sans-serif;
+  position:absolute;
+  top:220px;
+  left:30px;
+}
+.card2{
+  position: relative;
+  top:20px;
+}
+
+.card2::after{
+  content:url(/icons8-arrow-50.png);
+  position:absolute;
+  left:180px;
+  bottom:100px;
+}
+.card2::before{
+  content:"Pay for the product in any convenient way";
+  font-family:"Atkinson Hyperlegible",sans-serif;
+  position:absolute;
+  top:210px;
+}
+.card3{
+  position:relative;
+  top:20px;
+}
+.card3::before{
+  content:"Wait for SMS notification";
+  font-family:"Atkinson Hyperlegible",sans-serif;
+  position:absolute;
+  top:210px;
+}
+.card3::after{
+  content:url(/icons8-arrow-50.png);
+  position:absolute;
+  left:180px;
+  bottom:100px;
+}
+@media only screen and (max-width:700px){
+  .order{
+    height:700px;
+  }
+}
+@media only screen and (max-width:400px){
+  .oreder{
+    height:1200px;
+  }
+}
+.ready{
+  position:relative;
+}
+h5{
+  border:#f4aee6 solid 1px;
+  font-size: 50px;
+  color:#f4aee6;
+  position:absolute;
+  left:700px;
+}
+@media only screen and (max-width:830px){
+  h5{
+    left:30px;
+    top:120px
+  }
+}
+@media only screen and (max-width:610px){
+  h5{
+    top:300px;
+    left:270px
+  }
+}
